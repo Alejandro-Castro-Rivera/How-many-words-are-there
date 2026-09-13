@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+How_many_words_are_there = Flask(__name__)
 
 def word_count(words):
     number_words = len(words.split())
