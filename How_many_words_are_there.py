@@ -4,9 +4,7 @@ How_many_words_are_there = Flask(__name__)
 
 def word_count(words):
     number_words = len(words.split())
-    if number_words < 0:
-        return "Less than Zero"
-    if number_words == 0:
+    if number_words <= 0:
         return "Zero"
     if number_words == 1:
         return "One"
@@ -29,7 +27,7 @@ def word_count(words):
     if number_words == 10:
         return "Ten"
     if number_words > 10:
-        return "More than ten"
+        return number_words
     return None
 
 @How_many_words_are_there.route("/",methods=["GET","POST"])
