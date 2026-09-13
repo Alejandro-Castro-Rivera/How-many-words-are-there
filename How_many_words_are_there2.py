@@ -32,7 +32,7 @@ def word_count(words):
         return "More than ten"
     return None
 
-@app.route("/",methods=["GET","POST"])
+@How_many_words_are_there.route("/",methods=["GET","POST"])
 def home():
     result = None
     if request.method == "POST":
@@ -40,4 +40,4 @@ def home():
         result = word_count(phrase)
     return render_template("How_many_words_are_there.html", result=result)
 if __name__ == "__main__":
-    app.run(debug=True)
+    How_many_words_are_there.run(debug=True)
